@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>김태은 Portfolio</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon3/favicon-32x32.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <h1><a href="index.html">김태은 Portfolio</a></h1>
+    </header>
+    <div class="topNav" data-include="components/nav.html"></div>
+    <main class="contactMain">
+      <section>
+        <div class="visualImage contact"></div>
+        <div class="contBox">
+          <h2>Contact Me</h2>
+          <div class="contactInfoBox">
+            <dl>
+              <dt class="left">이름</dt>
+              <dd class="right">김태은</dd>
+            </dl>
+            <dl>
+              <dt class="left">연락처</dt>
+              <dd class="right">010-4517-3749</dd>
+            </dl>
+            <dl>
+              <dt class="left">이메일</dt>
+              <dd class="right">xodms12393@gmail.com</dd>
+            </dl>
+          </div>
+
+          <div class="ball ball_y"></div>
+          <div class="ball ball_g"></div>
+          <div class="ball ball_b"></div>
+          <div class="ball ball_o"></div>
+          <div class="ball ball_yg"></div>
+          <div class="ball ball_p"></div>
+        </div>
+      </section>
+
+    </main>
+    <footer>
+      <div data-include="components/footer.html"></div>
+    </footer>
+  </div>
+  
+  <script src="./js/components.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      const balls = document.querySelectorAll('.contactMain .contBox .ball');
+      const contBox = document.querySelector('.contactMain .contBox');
+
+      const ballData = [];
+
+      balls.forEach((ball, idx) => {
+        ballData.push({
+          el: ball,
+          x: Math.random() * 200 + 20,
+          y: Math.random() * 100 + 20,
+          vx: (Math.random() * 4 + 1) * (Math.random() > 0.5 ? 1: -1),
+          vy: (Math.random() * 4 + 1) * (Math.random() > 0.5 ? 1: -1)
+        });
+      });
+
+      function animate(){
+        const maxX = contBox.clientWidth;
+        const maxY = contBox.clientHeight;
+
+        ballData.forEach(ball => {
+          ball.x += ball.vx;
+          ball.y += ball.vy;
+
+          // 벽 충돌 처리
+          if(ball.x <= 0 || ball.x >= maxX - ball.el.offsetWidth) {ball.vx *= -1;}
+          if(ball.y <= 0 || ball.y >= maxY - ball.el.offsetHeight) {ball.vy *= -1;}
+
+          // 위치 업데이트
+          ball.el.style.transform = `translate(${ball.x}px, ${ball.y}px)`;
+        });
+        requestAnimationFrame(animate);
+
+      }
+      animate();
+    });
+  </script>
+</body>
+</html>
+

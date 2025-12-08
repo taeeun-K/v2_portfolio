@@ -1,0 +1,175 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-1Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-2ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2') format('woff2');
+    font-weight: 900;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'SchoolSafetyPoster';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2511-1@1.0/HakgyoansimPosterB.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'ChangwonDangamRounded';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2511-1@1.0/ChangwonDangamRound-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'DaeguBukseongro';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2511-1@1.0/DaeguBukseongro-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'DaeguBukseongro';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2511-1@1.0/DaeguBukseongro-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+ul,li  {list-style: none;}
+button  {cursor: pointer; background: none; border: none;}
+a  {text-decoration: none; color: inherit;}
+address  {font-style: normal;}
+em{font-style: normal; font-size: 12px;}
+body  {font-family: 'Noto Sans KR', sans-serif; font-size: 16px; line-height: 1.6; color: #333; background: #f5f5f5;font-family: 'ChangwonDangamRounded';}
+
+#wrap  {width: 100%; margin: 0 auto; }
+header{width: 100%; text-align: center; background: #f5f5f5;}
+header h1{position: relative; font-size: 40px; text-align: center; background: #f5f5f5; margin: 20px 0 10px; font-family: 'Paperozi'; font-weight: 700; z-index: 1;}
+@keyframes headerBorderAnim {
+    0% {background-position: -200% 0;}
+    100% {background-position: 200% 0;}
+}
+header h1::after {
+    position: absolute;
+    bottom: -10px; left: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, #000 40%, transparent 100%);
+    background-size: 200% 100%;
+    background-position: 0 0;
+    animation: headerBorderAnim 6s linear infinite;
+    z-index: 10;
+}
+.topNav { display: block; width: 100%; min-height: 65px; /* nav 높이 고정 */ position: sticky; top: 0; z-index: 100; background: #f5f5f5; }
+.nav { display: block;}
+.nav ul{display: flex; margin: 0; padding: 10px 0; justify-content: center; align-items: center; gap: 20px;}
+.nav ul li  {padding: 10px 30px;}
+.nav ul li a{ position: relative; transition: text-shadow 0.2s;}
+.nav ul li a:hover{color: rgb(204, 127, 255); text-shadow: 0 0 1px currentColor, 0 0 1px currentColor;}
+.nav ul li a:hover::after{position: absolute; content: ""; left: 0; bottom: -3px; width: 100%; height: 3px; background: rgb(204, 127, 255);}
+h2{margin-bottom: 40px; font-size: 38px; font-family: 'SchoolSafetyPoster'; letter-spacing: 1.4px;}
+
+/* 공통!! */
+main  {margin: 0 auto; width: 100%; text-align: center;}
+main .contBox  {padding: 50px 100px;}
+.visualImage  {position: relative; width: 100%; height: calc(100vh - 153px); overflow: hidden;}
+.visualImage.home  {height: 100vh;}
+.visualImage.home::before  {position: absolute; content: ""; inset: 0; background: url(./../images/moon.jpg) no-repeat center -90px / cover;  z-index: 1;}
+.visualImage.about::before  {position: absolute; content: ""; inset: 0; background: url(./../images/river2.jpg) no-repeat center -115px / cover;  z-index: 1;}
+.visualImage.ptf::before  {position: absolute; content: ""; inset: 0; background: url(./../images/pvisual.jpg) no-repeat center bottom -380px / cover;  z-index: 1;}
+.visualImage.ptf::after  {position: absolute; content: ""; inset: 0; left: 0; top: 0; right: 0; bottom: 0; background: #000; opacity: .7; z-index: 2;}
+.visualImage.contact::before  {position: absolute; content: ""; inset: 0; background: url(./../images/river1.jpg) no-repeat center -360px / cover;  z-index: 1;}
+footer  {padding: 80px 105px;color: #fff; font-size: 12px; background: #222;}
+footer p.copyright  {margin-top: 6px;}
+
+
+.aboutMain .contactInfoBox{display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 20px; font-size: 20px;}
+.aboutMain .contactInfoBox dl .txtHorizenBox{margin-top: 10px; }
+.aboutMain .contactInfoBox dl .txtHorizenBox:first-of-type{margin-top: 0;}
+.aboutMain .contactInfoBox dl .txtHorizenBox dt{font-size: 16px; font-weight: 700;}
+.aboutMain .contactInfoBox dl .txtHorizenBox dd{font-size: 14px;}
+.aboutMain .contactInfoBox dl .txtHorizenBox dd:first-of-type{margin-top: 5px;}
+.aboutMain .contactInfoBox dl .txtHorizenBox dd.full{display: block; width: 100%; font-size: 14px;}
+.aboutMain .contactInfoBox .selfIntroduce{font-family: 'DaeguBukseongro'; font-size: 20px; font-weight: 300; line-height: 1.8; margin-top: 30px; }
+
+/* portfolio */
+.portfolioMain .arcodianItem.open .arcodianContent  {}  
+.portfolioMain .arcodianItem .arcodianHeader  {position: relative; margin-top: 10px; padding-left: 20px
+  ; font-size: 20px; text-align: left; font-weight: bold; cursor: pointer; border: 1px solid #ccc; }  
+.portfolioMain .arcodianItem .arcodianHeader::after  {position:absolute; content: "▷"; color: #aaa; font-size: 10px; top: 50%; right: 10px; transform: translateY(-50%); transform-origin: center; transition: transform 0.3s ease;}  
+.portfolioMain .arcodianItem.open .arcodianHeader::after {content: '▶'; color: #aaaaaa; transform: translateY(-50%) rotate(90deg);}
+
+.portfolioMain .arcodianItem:first-child .arcodianHeader  {margin-top: 0;}  
+.portfolioMain .arcodianContent  {max-height: 0; overflow: hidden; transition: max-height 0.5s ease; min-width: 1440px; margin: 0 auto;}
+.portfolioMain .arcodianContent ul.projects  {display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 30px;}
+ul.projects li  { width: 100%; border: 5px solid #ccc; box-shadow: 0 0 5px rgba(0,0,0,0.1); border: 1px solid #ccc;}
+ul.projects li a  {position: relative; display: block; height: 350px; overflow: hidden;}
+ul.projects li a img  {width: 100%; height: 100%;}
+ul.projects li a:hover img  {transform: scale(1.1); transition: ease 0.5s;}
+ul.projects li a .pjInfo  {position: absolute; padding: 10px 0; left: 0; bottom: 0; width: 100%; opacity: .5; background: #000;}
+ul.projects li a .pjInfo span  {display: block; color: #fff;}
+
+
+/* contact */
+.contactMain .contBox{position: relative; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; overflow: hidden;}
+/* contact 텍스트와 정보가 공 위에 오도록 z-index 설정 */
+.contactMain .contBox h2,
+.contactMain .contBox .contactInfoBox { position: relative; z-index: 1; }
+.contactMain .contBox .contactInfoBox { font-size: 22px; }
+.contactMain .contactInfoBox dl{padding-left: 68px; display:flex;  justify-content: center; align-items: center; margin: 20px auto 0; }
+.contactMain .contactInfoBox dl dt{width: 100px; text-align: left; font-weight: 500;}
+.contactMain .contactInfoBox dl dd{flex: 1; text-align: left; font-weight: 500;}
+.contactMain .contBox .ball {position: absolute; left: 0; top: 0; width: 40px; height: 40px; border-radius: 50%; z-index: 0; opacity: 0.7;}
+.contactMain .contBox .ball_y {background: yellow;}
+.contactMain .contBox .ball_g {background: green;}
+.contactMain .contBox .ball_b {background: rgb(29, 135, 255);}
+.contactMain .contBox .ball_o {background: orange;}
+.contactMain .contBox .ball_yg {background: yellowgreen;}
+.contactMain .contBox .ball_p {background: rgb(210, 98, 255);}
