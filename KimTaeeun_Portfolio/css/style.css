@@ -162,8 +162,9 @@ ul.projects li a .pjInfo span  {display: block; color: #fff;}
 /* contact 텍스트와 정보가 공 위에 오도록 z-index 설정 */
 .contactMain .contBox h2,
 .contactMain .contBox .contactInfoBox { position: relative; z-index: 1; }
-.contactMain .contBox .contactInfoBox { font-size: 22px; }
-.contactMain .contactInfoBox dl{padding-left: 68px; display:flex;  justify-content: center; align-items: center; margin: 20px auto 0; }
+.contactMain .contBox .contactInfoBox { padding: 10px 30px; font-size: 22px; border: 1px solid #222;}
+.contactMain .contactInfoBox dl{ display:flex; justify-content: center; align-items: center; margin: 20px auto 0; }
+.contactMain .contactInfoBox dl:first-of-type{ margin-top: 0;}
 .contactMain .contactInfoBox dl dt{width: 100px; text-align: left; font-weight: 500;}
 .contactMain .contactInfoBox dl dd{flex: 1; text-align: left; font-weight: 500;}
 .contactMain .contBox .ball {position: absolute; left: 0; top: 0; width: 40px; height: 40px; border-radius: 50%; z-index: 0; opacity: 0.7;}
